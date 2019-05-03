@@ -1,0 +1,46 @@
+.Padre{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+}
+.header,.article,.aside,.footer{
+flex-grow: 1;
+flex-basis: 100%;
+padding: 10px;
+}
+.header{
+background: lightgray;
+text-align: center;
+font-size: 35px;
+}
+.article{
+background: #424242;
+color:#fff;
+font-size: 35px;
+}
+.izquierda{
+background: lightcoral;
+text-align: center;
+font-size: 35px;
+}
+.derecha{
+background: lightblue;
+text-align: center;
+font-size: 35px;
+}
+.footer{
+background: lightgreen;
+text-align: center;
+font-size: 35px;    
+}
+@media all and (min-width:600px){
+.aside{flex: 1 1 auto;}
+}
+@media all and (min-width:800px){
+.article{flex: 2 0;}
+.izquierda{order: 1;}
+.article{order: 2;}
+.derecha{order: 3;}
+.footer{order: 4;}
+
+}
